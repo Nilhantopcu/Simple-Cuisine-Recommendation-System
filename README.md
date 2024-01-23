@@ -46,7 +46,5 @@ The project is implemented in Python and utilizes the pandas and numpy libraries
 ## Acknowledgments
 This project was developed as part of the COMP4605 Data Mining course.
 
-## License
-This project is licensed under the [License Name] - see the LICENSE file for details.
 
 
