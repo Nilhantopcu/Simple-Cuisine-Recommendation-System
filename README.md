@@ -1,50 +1,58 @@
-# Mini Project 1 - Cuisine Recommendation System
+# Mini Cuisine Recommendation System
 
-This is a simple cuisine recommendation system developed for the COMP4605 Data Mining course (Fall 2023) Mini Project 1.
+This project implements a simple cuisine recommendation system based on user preferences and ratings. The system utilizes a dataset containing user information, restaurant information, cuisine information, and user ratings.
 
-## Project Description
+## Project Overview
 
-The goal of this project is to build a cuisine recommendation system based on user preferences and ratings. The system utilizes a dataset consisting of user information, restaurant information, cuisine details, and ratings given by users.
+- **Data Files:**
+  - `userprofile.csv`: Contains user identifiers and names.
+  - `places.csv`: Contains restaurant identifiers and names.
+  - `ratings.csv`: Contains ratings given by users to restaurants.
+  - `place_cuisine.csv`: Contains information about the types of cuisine served by some restaurants.
 
-## Dataset
+- **Dataset Construction:**
+  - Parses CSV files, skips the first lines with column meta-data.
+  - Constructs a user rating dictionary.
 
-The project uses the following CSV files:
-- `userprofile.csv`: User information
-- `ratings.csv`: Ratings given by users
-- `places.csv`: Restaurant information
-- `place_cuisine.csv`: Information about the types of cuisine served by restaurants
+- **Overall Cuisine Rating Calculation:**
+  - Combines general, food, and service ratings to calculate an overall cuisine rating.
 
-## Implementation
+- **Cuisine Rank Calculation:**
+  - Ranks cuisine based on appearance order in the `place_cuisine.csv` file.
 
-The project is implemented in Python and utilizes the pandas and numpy libraries for data manipulation. The main functionalities include:
-- Reading and parsing the dataset
-- Constructing a user ratings dictionary
-- Calculating the overall cuisine rating based on a specific formula
-- Displaying a menu for user interaction
-
-## Getting Started
-
-1. Install the required dependencies:
-   ```bash
-   pip install pandas numpy
-2. Run the project
-   - python your_project_file.py
-
-## Project Structure
-- your_project_file.py: Main Python script containing the project implementation.
-- userprofile.csv, ratings.csv, places.csv, place_cuisine.csv: Dataset files.
+- **User Ratings Dictionary Example:**
+  ```python
+  {
+    "BEDIRHAN": {"Chinese": 2.4, "Turkish": 3.0, ...},
+    "MUSTAFA CEBECI": {"Fast_Food": 1.8, "Mexican": 0.9, ...},
+    ...
+  }
 
 ## Menu Options
-1. Select a similarity metric (Euclidean or Pearson).
-2. Display cuisine (item) similarity matrix.
-3. Select a recommendation model (User-based or Item-based).
-4. Set the maximum number of recommendations to be made.
-5. List similar persons to a given person, together with their similarity scores.
-6. Make a recommendation to a specific user.
-7. Exit the program.
+1. Select Similarity Metric:
+   - Choose between Euclidean or Pearson similarity.
+2. Display Cuisine Similarity Matrix:
+   - View the similarity matrix for cuisines.
+3. Select Recommendation Model:
+   - Choose between User-based or Item-based recommendation.
+4. Set Maximum Recommendations:
+   -Set the maximum number of recommendations.
+5. List Similar Persons:
+   - List persons similar to a given person with their similarity scores.
+6. Make Recommendations:
+   - Make recommendations to a specific user based on the selected model.
+7. Exit:
+   - Exit the program.
+
+## Getting Started
+To run the program, follow these steps:
+
+1. Clone the repository to your local machine.
+2. Ensure you have the required dependencies installed.
+3. Run the program in your preferred Python environment.
 
 ## Acknowledgments
-This project was developed as part of the COMP4605 Data Mining course.
+This project was developed as part of the Data Mining course.
 
 
 
